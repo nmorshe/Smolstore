@@ -4,7 +4,7 @@ import Products from "@/components/Products";
 const apiEndPoint = '/api/products';
 
 export async function getProducts() {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseURL = process.env.HOST_URL;
   const response = await fetch(baseURL + apiEndPoint);
   const products = await response.json();
   return products;
