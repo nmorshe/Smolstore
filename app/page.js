@@ -2,6 +2,8 @@ import ImageBanner from "@/components/ImageBanner";
 import Products from "@/components/Products";
 import { getProducts } from "@/lib/getProducts";
 
+export const dynamic = 'force-dynamic';
+
 const Home = async () => {
 
   const products = await getProducts();
