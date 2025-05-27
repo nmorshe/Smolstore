@@ -35,8 +35,18 @@ const ImageBanner = () => {
                         <h1>The Main Store</h1>
                     </div>
                     <div>
-                        <button>Shop stickers</button>
-                        <button>Shop planners</button>
+                        <button onClick={
+                            () => {
+                                document.querySelector('.sticker-container')
+                                .scrollIntoView({ behavior: "auto" })
+                            }
+                        }>Shop stickers</button>
+                        <button onClick={
+                            () => {
+                                document.querySelector('.planner-container')
+                                .scrollIntoView({ behavior: "auto" })
+                            }
+                        }>Shop planners</button>
                     </div>
                 </div>
             </div>

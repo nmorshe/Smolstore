@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
               <div className="links-container">
                 <div>
                   <h3>Ecosystem</h3>
-                  <Link target="_blank" href={'/'}>Project GitHub</Link>
+                  <Link target="_blank" href={'https://github.com/nmorshe/Smolstore'}>Project GitHub</Link>
                   <Link target="_blank" href={'/'}>Roadmap</Link>
                 </div>
                 <div>

@@ -3,7 +3,7 @@ import '../../../envConfig.js'
 
 const API_KEY = process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY;
 const stripe = new Stripe(API_KEY, {
-    apiVersion: '2025-5-24'
+    apiVersion: '2025-04-30.basil'
 });
 
 export async function POST(request) {
@@ -20,8 +20,8 @@ export async function POST(request) {
             line_items: lineItems,
 
             //URLs if payment is confirmed successfully or canceled.
-            success_url: process.env.NEXT_PUBLIC_BASE_URL + '/success',
-            cancel_url: process.env.NEXT_PUBLIC_BASE_URL + '/'
+            success_url: process.env.HOST_URL + '/success',
+            cancel_url: process.env.HOST_URL + '/'
         })
 
         // Returning the session to the frontend

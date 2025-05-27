@@ -1,14 +1,6 @@
 import ImageBanner from "@/components/ImageBanner";
 import Products from "@/components/Products";
-
-const apiEndPoint = '/api/products';
-
-export async function getProducts() {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-  const response = await fetch(baseURL + apiEndPoint);
-  const products = await response.json();
-  return products;
-}
+import { getProducts } from "@/lib/getProducts";
 
 const Home = async () => {
 

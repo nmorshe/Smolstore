@@ -14,8 +14,6 @@ const CartPage = () => {
 
   const createCheckout = async() => {
     try {
-
-      const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
       
       const lineItems = Object.keys(cart).map((item, itemIndex) => {
         return {
@@ -24,25 +22,26 @@ const CartPage = () => {
         }
       })
       
-      const response = await fetch(baseURL + apiEndPoint, {
-        method: 'POST',
-        headers: {
-          'Content-type': 'application/json'
-        },
-        body: JSON.stringify({lineItems})
-      })
+    
+      const response = await fetch(apiEndPoint, {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json'
+          },
+          body: JSON.stringify({lineItems})
+        })
 
 
       const data = await response.json();
 
-      if (response.ok){
+      if (response.ok) {
         console.log(data);
 
         router.push(data.url);
       }
     }
 
-    catch {
+    catch (err) {
       console.log('Error creating checkout: ', err.message);
     }
   }
@@ -96,7 +95,7 @@ const CartPage = () => {
         })}
 
         <div>
-          <h3>Total: ${subtotal}</h3>
+          <h3>Total: ${Math.floor(subtotal * 100) / 100}</h3>
         </div>
       </div>
       <div className="checkout-container">
