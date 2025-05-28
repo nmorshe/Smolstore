@@ -20,8 +20,8 @@ export async function POST(request) {
             line_items: lineItems,
 
             //URLs if payment is confirmed successfully or canceled.
-            success_url: process.env.HOST_URL + '/success',
-            cancel_url: process.env.HOST_URL + '/'
+            success_url: process.env.NEXT_PUBLIC_BASE_URL + '/success',
+            cancel_url: process.env.NEXT_PUBLIC_BASE_URL + '/'
         })
 
         // Returning the session to the frontend
