@@ -30,6 +30,6 @@ export async function POST(request) {
 
     catch (err) {
         console.error('Error creating cart checkout: ', err.message);
-        return Response.json({error: 'Failed to create cart checkout page.'});
+        return Response.json({error: 'Failed to create cart checkout page.' + err.message});
     }
 }
