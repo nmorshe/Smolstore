@@ -6,3 +6,5 @@ This project was mainly created via the use of Next.js development packages, VS 
 and hooks created through react libraries, as well as logo designs from FontAwesome. Now published on AWS Amplify
 
 Link: https://master.dgqarhbntp09e.amplifyapp.com/
+
+Instructor: James McArthur
